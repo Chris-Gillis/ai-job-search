@@ -8,11 +8,14 @@
 Christopher is US-based and remote-first, so the search uses **country-agnostic** tools rather than the Danish portals:
 
 - **LinkedIn** - use the `linkedin-search` skill (filter: Remote (United States); secondary: Tampa, FL / Tampa Bay).
+- **Remotive** - use the `remotive-search` skill for a broad sweep of fully-remote roles across all companies at once (global aggregator, server-side keyword search, no `--board`). Keep it low-frequency (a couple of calls per run) per Remotive's terms.
 - **Ashby** - use the `ashby-search` skill to search a named company's Ashby-hosted job board.
 - **Greenhouse** - use the `greenhouse-search` skill to search a named company's Greenhouse-hosted job board.
-- **Google `site:` searches** - for company career pages and boards not covered above (Lever, Workday, etc.).
+- **Lever** - use the `lever-search` skill to search a named company's Lever-hosted job board (e.g. `-b spotify`).
+- **SmartRecruiters** - use the `smartrecruiters-search` skill to search a named company's SmartRecruiters board; it supports server-side keyword search (e.g. `-b Visa -q engineer`).
+- **Google `site:` searches** - for company career pages and boards not covered above (Workday, etc.).
 
-Many AI startups run their careers on Ashby or Greenhouse, so monitor target companies directly with those two skills in addition to the broad LinkedIn sweep.
+Many AI startups run their careers on Ashby, Greenhouse, or Lever, so monitor target companies directly with those ATS skills in addition to the broad LinkedIn + Remotive sweeps.
 
 ## Target Companies to Monitor (Ashby / Greenhouse / careers pages)
 
@@ -23,7 +26,7 @@ AI / agent platforms and dev-tooling companies worth checking directly:
 
 ## Query Categories
 
-Queries are grouped by priority. For LinkedIn, add the location filter **Remote (United States)** (and optionally **Tampa, FL**). For Ashby/Greenhouse, run the role-title terms against each target company's board.
+Queries are grouped by priority. For LinkedIn, add the location filter **Remote (United States)** (and optionally **Tampa, FL**). For Remotive, run the role-title terms as a global keyword search (`-q`). For the ATS skills (Ashby / Greenhouse / Lever / SmartRecruiters), run the role-title terms against each target company's board (`-b <company>`).
 
 ### Priority 1: Senior / Staff Full-Stack & Platform Engineer
 
@@ -34,6 +37,8 @@ linkedin-search "Senior Software Engineer" remote united states
 linkedin-search "Senior Full Stack Engineer" remote united states
 linkedin-search "Staff Software Engineer" remote united states
 linkedin-search "Staff Engineer" platform remote united states
+remotive-search -q "Senior Full Stack Engineer"
+remotive-search -q "Staff Software Engineer"
 ```
 
 ### Priority 2: AI / Agent / Platform Engineering
@@ -44,8 +49,12 @@ Matches his current, most differentiated experience (AI agents, MCP, AI-assisted
 linkedin-search "AI Engineer" remote united states
 linkedin-search "Software Engineer" "AI agents" remote
 linkedin-search "Platform Engineer" LLM OR agents remote united states
-ashby-search <company> "engineer" AI
-greenhouse-search <company> "software engineer" AI
+remotive-search -q "AI Engineer"
+remotive-search -q "software engineer agents"
+ashby-search -b <company> -q "engineer" AI
+greenhouse-search -b <company> -q "software engineer" AI
+lever-search -b <company> -q "engineer"
+smartrecruiters-search -b <company> -q "software engineer"
 ```
 
 ### Priority 3: Backend / Infrastructure (adjacent)
@@ -63,7 +72,9 @@ linkedin-search "Infrastructure Engineer" AWS Terraform remote united states
 ```
 linkedin-search "Full Stack Engineer" TypeScript React remote united states
 linkedin-search "Software Engineer" Java OR Go remote united states
-greenhouse-search <company> "senior software engineer"
+remotive-search -q "Full Stack Engineer" --limit 50
+greenhouse-search -b <company> -q "senior software engineer"
+lever-search -b <company> -q "software engineer"
 ```
 
 ## Location Filter

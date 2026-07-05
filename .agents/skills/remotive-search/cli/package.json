@@ -1,0 +1,19 @@
+{
+  "name": "remotive-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching Remotive, a global remote-job aggregator — server-side keyword search across all companies, no per-company board, no authentication, zero runtime dependencies.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "remotive-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}
