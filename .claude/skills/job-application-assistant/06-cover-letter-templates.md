@@ -51,6 +51,15 @@ The `\lettercontent{}` macro appends `\\` to its argument. This breaks when the 
 
 The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\lettercontent{}` without the `\fontspec` block, bullets render in the default body font (Lato) and visually mismatch the rest of the letter.
 
+### Known template pitfall: stray `\\` in `\closing{}`
+
+The `\closing{}` macro in `cover.cls` already appends its own `\\`. Passing an argument that also ends in `\\` (e.g. `\closing{Kind regards,\\}`) produces a doubled break on an empty line and fails with `! LaTeX Error: There's no line here to end.` and no PDF output. Write the closing without a trailing `\\`:
+
+```latex
+\closing{Kind regards,}   % correct
+\closing{Kind regards,\\} % WRONG - doubled \\, breaks compile
+```
+
 ## Document Structure
 
 ```latex
@@ -99,7 +108,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 \lettercontent{I look forward to hearing from you.}
 
 \begin{flushright}
-\closing{Kind regards,\\}
+\closing{Kind regards,}
 
 \signature{[YOUR_NAME]}
 \end{flushright}

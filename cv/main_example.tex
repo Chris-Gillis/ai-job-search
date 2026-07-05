@@ -1,8 +1,8 @@
-%% Example CV - [YOUR_NAME]
+%% Master CV - Christopher Gillis
 %% Comprehensive overview of all competencies, experience, and achievements.
-%% Use as a master reference when tailoring role-specific CVs.
+%% Use as a master reference when tailoring role-specific CVs (cv/main_<company>.tex).
+%% This master may run longer than 2 pages; tailored per-role CVs must be exactly 2.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -18,24 +18,25 @@
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
+\usepackage{needspace}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Christopher Gillis - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Christopher}{Gillis}
+\address{Tampa, FL, USA}{}{}
+\phone[mobile]{813-440-7962}
+\email{christopher.l.gillis@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/christopher-gillis-no-but-really}{LinkedIn}, \href{https://github.com/Chris-Gillis}{GitHub}}
 
 \begin{document}
 
@@ -46,7 +47,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Senior full-stack engineer with 15+ years building reliable, scalable web and platform systems across product, data, and internal tooling. Deep across TypeScript/React, Java/Spring, Go, and Node, with a track record of improving reliability, developer productivity, and production quality in multi-tenant, distributed environments. Recent work spans AI-assisted product features, secure agent integrations (MCP with OAuth), and platform capabilities used by internal teams and external users. I take unreliable or ambiguous systems and make them dependable, end-to-end.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +57,17 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Languages}: Go, TypeScript/JavaScript, Python, Java, PHP.
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Frontend \& Backend}: React, Next.js, Angular, Inertia.js; Node/NestJS, Express, Spring Boot, Ruby on Rails, Flask/Celery, Laravel.
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Data \& Storage}: PostgreSQL, MySQL, Oracle; vector search (pgvector), fuzzy search (pg\_trgm), caching.
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Cloud \& Infrastructure}: AWS (Lambda, ECS/Fargate, RDS, S3, DynamoDB, CloudFront, SES, Cognito, VPC), Terraform, Docker, Heroku, CI/CD.
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Platform \& AI}: distributed \& multi-tenant systems, API design, authentication/OAuth (incl. OAuth Dynamic Client Registration), MCP clients, AI-assisted workflows (incl. Claude Code), async/job infrastructure.
+
+\item \textbf{Integrations}: Salesforce, HubSpot, Workato, Slack.
 
 \end{itemize}
 
@@ -76,32 +79,110 @@
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2025--Present}{Software Engineer}{Agent.ai}{Remote}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Re-architected a flaky serverless AWS Lambda workflow, improving reliability and reducing related support tickets by 55\%.
+    \item Built AI-assisted platform features for Agent Builder and Knowledge Builder used by 3,000+ builders.
+    \item Designed a secure MCP client using OAuth Dynamic Client Registration, enabling agents to authenticate against and consume external MCP servers.
+    \item Implemented HubSpot CRM integrations and AI-powered workflows enabling 100+ builders to create 250+ agents.
+    \item Established frontend unit and feature testing, raising coverage from 0\% to 50\%; resolved 150+ defects across the stack.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2023--2025}{Software Engineer}{Zift Solutions (Unifyr)}{Remote}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Delivered 100+ features and fixes on a multi-tenant partner-automation platform serving 2,000+ customers.
+    \item Extended Salesforce, HubSpot, and Workato integrations for automated workflows and cross-system data sync.
+    \item Improved reliability and usability of a public-facing API through a rotating production support cycle.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2023--2025}{Technology Advisor}{Helmur}{Remote}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Designed and provisioned production AWS infrastructure with Terraform (VPC, RDS, ECS/Fargate, S3, DynamoDB, CloudFront, SES, Cognito).
+    \item Helped shape product roadmap, infrastructure direction, and engineering processes.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2022--2023}{Senior Software Engineer}{Spaceback}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Led a migration from a Rails monolith to a hybrid Rails and Go services architecture.
+    \item Built a caching layer for high-volume social-post data, reducing average load times by 20--25\%.
+    \item Converted long-running synchronous operations into asynchronous workflows with user-facing progress tracking.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2022}{Senior Software Engineer}{OneScreen.ai}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Led migration of the backend from Express.js to NestJS, improving maintainability and code organization.
+    \item Established API contract guidelines between backend and frontend teams; conducted code reviews across a team of 8 engineers.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2019--2022}{Staff Software Engineer}{HomeCare Connect, LLC}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item Led and mentored a team of two junior developers, providing technical direction and code reviews.
+    \item Implemented a Flyway-based database migration system, eliminating error-prone manual deployment steps.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2018--2019}{Senior Associate -- Engineer}{PricewaterhouseCoopers}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built a web application for structured data ingestion in a data-lake pipeline; mentored junior developers.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2014--2018}{Senior Developer}{Applied Technical Systems (USPTO)}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item Led a reusable React component library effort, reducing duplication across multiple application teams.
+    \item Served as lead front-end developer on a complex pricing-rules builder; modernized in-house testing and code coverage.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{3\baselineskip}
+\item{\cventry{}{Early Career}{VBrick Systems, Masonite, HealthESystems, TechHealth}{}{}{\vspace{1pt}
+C\# .NET, AngularJS, DDD/CQRS, EventStore; Java, GWT, SOAP, JUnit; Ext.js, Oracle.}}
+
+\end{itemize}
+
+% ============================================================
+%     SELECTED PROJECTS
+% ============================================================
+
+\section{Selected Projects}
+\vspace{1pt}
+\begin{itemize}
+
+\needspace{4\baselineskip}
+\item{\cventry{2025--Present}{Chesscraft}{\href{https://chesscraft.ai}{chesscraft.ai}}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item Designed and built a full-stack SaaS platform end-to-end (React, Inertia.js, PHP/Laravel, PostgreSQL, Supabase, WASM).
+    \item Built real-time features over WebSockets; implemented PostgreSQL fuzzy search (pg\_trgm) over players, openings, and game metadata.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{4\baselineskip}
+\item{\cventry{2025--Present}{AoR}{\href{https://aorhq.org}{aorhq.org}}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built an AI-assisted intake flow converting natural language into structured, validated requests via prompt design and output validation.
+    \item Built a pgvector-backed matching and discovery system; implemented multi-role access control and an end-to-end request workflow.
 \end{itemize}}}
 
 \end{itemize}
@@ -114,15 +195,11 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
+\item{\cventry{2011}{B.S., Computer Science}{University of South Florida}{Tampa, FL}{}{}}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{2007}{B.A., Psychology}{University of South Florida}{Tampa, FL}{}{}}
 
 \end{itemize}
 
@@ -133,27 +210,7 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
-\end{itemize}
-
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item English (native).
 \end{itemize}
 
 % ============================================================

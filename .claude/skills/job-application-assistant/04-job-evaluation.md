@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Full-stack web (TypeScript/React/Next.js, Node/NestJS, Java/Spring Boot, Go), multi-tenant SaaS platforms, API & authentication/OAuth design, AWS + Terraform infrastructure, AI-agent/MCP integrations, reliability/production quality, testing & CI/CD
+**Moderate match areas:** PHP/Laravel, Python/Flask, Ruby on Rails, data/analytics pipelines, DevOps/infra ownership, technical leadership/mentoring of small teams
+**Weak match areas:** Native mobile (iOS/Android), ML research / model training, data science/statistics, pure SRE/on-call-heavy ops *(confirm)*
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Senior/Staff full-stack & platform engineering, B2B SaaS, multi-tenant systems, marketplace/AI-agent products, martech/adtech, enterprise integrations
+**Moderate:** Analytics/funnel products, workers-comp/claims & regulated domains, technical advisory / infra provisioning
+**Entry-level:** Formal engineering management (headcount ownership), ML/research roles
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -63,19 +63,20 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Grow from Senior into Staff/Principal-level IC scope (architecture and cross-team technical ownership)
+- Do meaningful AI / agentic product and platform work (LLMs, agents, MCP, AI-assisted workflows)
+- Keep solving hard technical/systems problems end-to-end, with high autonomy and low process overhead
+- Stay fully remote (US)
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: end-to-end ownership of a problem area; hard systems/architecture and performance problems; AI/agent product work; reliability and quality wins; migrations and modernization
+- Tasks that drain (inferred - confirm): heavy process with low autonomy; pure maintenance with no room to build; rigid bureaucracy and slow decision-making
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Currently employed; not in a forced-move situation, so can be selective
+- **Flexibility**: Remote-first is a hard requirement; based in Tampa, FL (US Eastern time)
+- **Professional development**: Wants a path toward Staff/Principal scope and deeper AI/agent platform work
 
 ### 6. Salary Benchmark (Optional)
 

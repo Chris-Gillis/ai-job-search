@@ -105,12 +105,14 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For senior/staff full-stack engineering roles:**
+> Senior full-stack engineer with 15+ years building reliable, scalable web and platform systems across product, data, and internal tooling. Deep across TypeScript/React, Java/Spring, Go, and Node, with a track record of improving reliability, developer productivity, and production quality in multi-tenant, distributed environments. I take unreliable or ambiguous systems and make them dependable, end-to-end.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For platform / AI-agent / integration engineering roles:**
+> Full-stack platform engineer with recent, hands-on work on AI-assisted product features, secure agent integrations (MCP clients with OAuth Dynamic Client Registration), and CRM/workflow automation used by thousands of builders. I pair 15+ years of production web experience with practical AI tooling (including Claude Code) to ship agent and platform capabilities that internal teams and external users actually rely on.
+
+**For technical lead / high-ownership roles:**
+> Staff-level generalist who owns problem areas end-to-end: architecture, implementation, deployment, and iteration. I have led monolith-to-services migrations, stood up production AWS/Terraform infrastructure, mentored engineers, and driven measurable reliability wins (support tickets down 55%, test coverage 0 to 50%). Comfortable being the person a team hands its hardest reliability and delivery problems to.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

@@ -1,50 +1,42 @@
 # Behavioral Profile
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- You can use results from PI, DISC, Myers-Briggs, StrengthsFinder, or a self-assessment -->
+> **Note:** No formal assessment (PI/DISC/etc.), LinkedIn "About" section, or reference letters were provided at setup. The traits below are **inferred from CV/resume signals only** and are labeled as such. Review and correct them before relying on them in applications. Add a LinkedIn export or reference letters to `documents/` and re-run `/setup` to strengthen this profile.
 
 ## Overview
-[YOUR_NAME]'s behavioral assessment identifies them as a **[PROFILE_TYPE]** pattern. [1-2 SENTENCE_SUMMARY].
+Christopher presents as a **high-ownership, generalist senior/staff engineer** who takes ambiguous or unreliable systems and makes them dependable. Recurring pattern across roles: step into a problem area (a flaky serverless workflow, a monolith needing migration, zero test coverage), own it end-to-end, and leave it measurably better. *[Inferred from resume - review before relying on this]*
 
-## Core Behavioral Drives
+## Strongest Behaviors *(inferred)*
+- **High ownership / end-to-end delivery:** Repeatedly "designed and built end-to-end," "owned architecture, implementation, deployment." Comfortable across frontend, backend, data, and infrastructure. *[Inferred from resume]*
+- **Reliability & quality focus:** Track record of reducing support tickets (-55%), raising test coverage (0% to 50%), resolving 150+ defects, eliminating error-prone manual steps. Gravitates toward stability and production health. *[Inferred from resume]*
+- **Modernization / migration instinct:** Rails-to-Go, Express-to-NestJS, Flyway migrations, reusable component libraries. Improves the system others have to work in. *[Inferred from resume]*
+- **Mentoring & technical leadership:** Led/mentored small teams, ran code reviews across 8 engineers, established API contract guidelines and knowledge-sharing sessions. *[Inferred from resume]*
+- **Cross-functional collaboration:** Works across product and engineering stakeholders; shaped roadmap and process as a technology advisor. *[Inferred from resume]*
 
-| Drive | Level | Meaning |
-|-------|-------|---------|
-| [DRIVE_1] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_2] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_3] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_4] | [LEVEL] | [DESCRIPTION] |
-
-## Strongest Behaviors
-- **[BEHAVIOR_1]:** [DESCRIPTION]
-- **[BEHAVIOR_2]:** [DESCRIPTION]
-- **[BEHAVIOR_3]:** [DESCRIPTION]
-
-## How You Work Best
-- [ENVIRONMENT_PREFERENCE_1]
-- [ENVIRONMENT_PREFERENCE_2]
-- [ENVIRONMENT_PREFERENCE_3]
+## How You Work Best *(inferred - confirm)*
+- High autonomy with real ownership of a problem area
+- Environments that value reliability, developer productivity, and pragmatic delivery over ceremony
+- Small-to-mid teams where a senior generalist has broad surface area
 
 ## Growth Areas (frame positively in applications)
-- **[AREA_1]:** [HOW_TO_FRAME_IT_POSITIVELY]
-- **[AREA_2]:** [HOW_TO_FRAME_IT_POSITIVELY]
+- *(To confirm with candidate — leave blank rather than invent.)*
 
 ## Mapping to Job Posting Language
 
-When a job posting mentions these keywords, it's a **strong behavioral fit**:
-- [KEYWORD_OR_PHRASE_THAT_MATCHES_YOUR_STYLE]
-- [ANOTHER_KEYWORD]
+When a posting mentions these, it's a **strong behavioral fit** *(inferred)*:
+- "high ownership," "end-to-end," "full-stack," "generalist," "0-to-1 and 1-to-n"
+- "reliability," "production quality," "developer experience," "platform"
+- "migration," "modernization," "paying down tech debt"
+- "mentoring," "code review," "technical leadership"
 
-When a job posting mentions these, flag as **potential friction** (not deal-breaker):
-- [KEYWORD_OR_PHRASE_THAT_MIGHT_CLASH]
-- [ANOTHER_KEYWORD]
+When a posting mentions these, flag as **potential friction** (not a deal-breaker) *(inferred - confirm)*:
+- Deep specialization in a single narrow stack with no breadth
+- Heavy process / low autonomy environments
 
 ## Management Style Preferences
-- [WHAT_MANAGEMENT_STYLE_WORKS_FOR_YOU]
-- [WHAT_DOESN'T_WORK]
+- *(To confirm with candidate.)*
 
 ## Using This in Applications
-- **Cover letters:** [HOW_TO_WEAVE_IN_BEHAVIORAL_STRENGTHS]
-- **CV:** [WHAT_TO_EMPHASIZE]
-- **Interviews:** [WHAT_STAR_EXAMPLES_TO_USE]
-- **Don't overstate:** [WHAT_NOT_TO_CLAIM]
+- **Cover letters:** Lead with ownership and measurable reliability/quality wins.
+- **CV:** Emphasize end-to-end delivery, migrations, and metrics.
+- **Interviews:** Use the migration and reliability STAR stubs in `07-interview-prep.md`.
+- **Don't overstate:** Formal people-management scope is limited to small teams/mentoring, not large-org management. Don't claim EM-level headcount ownership.

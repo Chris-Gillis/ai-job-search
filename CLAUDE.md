@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Christopher Gillis
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Christopher Gillis, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,68 +10,81 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Christopher Gillis
+- **Location:** Tampa, FL, USA (Tampa Bay area). Remote-first: strongly prefers fully remote (US), open to hybrid/onsite locally, not relocating.
+- **Languages:** English (native)
+- **Status:** Employed - Software Engineer at Agent.ai (open to new opportunities)
+- **LinkedIn headline:** "Senior Full Stack Engineer"
+- **Contact:** christopher.l.gillis@gmail.com | 813-440-7962 | linkedin.com/in/christopher-gillis-no-but-really | github.com/Chris-Gillis
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.S. in Computer Science** (2011) - University of South Florida, Tampa, FL
+- **B.A. in Psychology** (2007) - University of South Florida, Tampa, FL
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Software Engineer** (Mar 2025 - Present) - **Agent.ai** (Marketplace for AI Agents; remote)
+  - Re-architected a flaky serverless AWS Lambda workflow, cutting related support tickets by 55%
+  - Built AI-assisted Agent Builder / Knowledge Builder features used by 3,000+ builders
+  - Designed a secure MCP client using OAuth Dynamic Client Registration; implemented HubSpot CRM integrations; raised frontend test coverage from 0% to 50%
+- **Software Engineer** (Jul 2023 - Mar 2025) - **Zift Solutions (Unifyr)** (Partner channel automation)
+  - Delivered 100+ features on a multi-tenant platform serving 2,000+ customers
+  - Extended Salesforce, HubSpot, and Workato integrations; improved a public-facing API via production support rotation
+- **Technology Advisor** (Apr 2023 - Mar 2025) - **Helmur** (Funnel analytics)
+  - Designed and provisioned production AWS infra with Terraform (VPC, RDS, ECS/Fargate, S3, DynamoDB, CloudFront, SES, Cognito); shaped roadmap and process
+- **Senior Software Engineer** (Sep 2022 - Jul 2023) - **Spaceback** (Social-media ad platform)
+  - Led a Rails-monolith to Rails+Go services migration; built a caching layer cutting load times 20-25%
+- **Senior Software Engineer** (Jan 2022 - Sep 2022) - **OneScreen.ai** (Out-of-home ad marketplace)
+  - Led Express-to-NestJS backend migration; set API contract guidelines; code reviews across 8 engineers
+- **Staff Software Engineer** (Aug 2019 - Jan 2022) - **HomeCare Connect, LLC** (Workers-comp claims)
+  - Led/mentored junior developers; built a Flyway migration system
+- **Senior Associate - Engineer** (Jun 2018 - Aug 2019) - **PricewaterhouseCoopers**
+  - Built a data-lake ingestion web app; mentored junior developers
+- **Senior Developer** (Oct 2014 - Jun 2018) - **Applied Technical Systems** (USPTO application development)
+  - Led a reusable React component library; lead front-end dev on a pricing-rules builder
+- **Early career:** VBrick Systems, Masonite, HealthESystems, TechHealth
+
+### Independent Projects
+- **Chesscraft (chesscraft.ai)** - Full-stack SaaS built end-to-end; real-time WebSocket features; PostgreSQL fuzzy search (pg_trgm). React, Inertia.js, PHP/Laravel, Supabase, WASM.
+- **AoR (aorhq.org)** - AI-assisted intake flow (NL to structured/validated requests); pgvector-backed matching/discovery; multi-role access control. React, Inertia.js, PHP/Laravel.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Go, TypeScript/JavaScript, Java, React/Next.js, Node/NestJS, Spring Boot, PostgreSQL/MySQL, AWS, Terraform, authentication/OAuth, distributed & multi-tenant systems
+- **Secondary:** Python/Flask, PHP/Laravel, Ruby on Rails, Angular, Docker, Celery, caching, vector search (pgvector), CI/CD
+- **Domain:** AI-agent platforms & MCP integrations, B2B SaaS, marketplaces, martech/adtech, enterprise integrations (Salesforce, HubSpot, Workato)
+- **Software:** AWS (Lambda, ECS/Fargate, RDS, S3, DynamoDB, CloudFront, SES, Cognito), Terraform, Docker, Heroku, Claude Code
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- None on record.
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None on record.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- None on record.
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- Inferred from resume at setup; see 02-behavioral-profile.md. Confirm/refine before heavy reliance. -->
+- **High ownership** - Takes unreliable/ambiguous systems and makes them dependable, end-to-end
+- **Reliability & quality focus** - Track record of cutting tickets/defects and raising test coverage
+- **Strengths:** Full-stack breadth, migrations/modernization, mentoring small teams, cross-functional delivery
+- **Growth areas:** (to confirm)
+- **Thrives in:** High-autonomy environments with real ownership and low process overhead
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- AI / agentic product work (LLMs, agents, MCP, AI-assisted workflows)
+- Hard technical / systems problems owned end-to-end with high autonomy
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- AI / ML startups & agent platforms: e.g. Anthropic, OpenAI, LangChain, Hugging Face, Perplexity
+- B2B SaaS / platform companies: multi-tenant SaaS, developer/platform tooling
+- Big tech / established product companies
+- Early-stage startups (founding / early engineer)
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- No remote option (fully-onsite outside Tampa Bay) - remote-first is a hard requirement
+- Relocation required
+- Roles gated on credentials Christopher does not have (e.g. ML-research/PhD-required positions)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

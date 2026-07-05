@@ -8,32 +8,60 @@ Structure answers as: **Situation** (context), **Task** (your responsibility), *
 
 Keep answers to 1-2 minutes. Be specific. End with what you learned or would do differently.
 
-## Ready-Made STAR Examples
+## STAR Candidates (Complete Manually)
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+<!-- /setup generated these stubs from resume achievements. Fill in the S/T/A/R
+     details in your own words before using them in an interview. Aim for 4-6. -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Serverless Lambda re-architecture (reliability)
+**Source:** Resume - Agent.ai
+**What happened:** Re-architected a flaky serverless AWS Lambda workflow with persistent deployment/consistency issues, cutting related support tickets by 55%.
+**Why it matters:** "Tell me about a time you improved reliability / owned a hard production problem," "a system you re-architected."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result: Support tickets related to serverless functions down 55%.
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Rails-to-Go migration + caching layer (architecture at scale)
+**Source:** Resume - Spaceback
+**What happened:** Led migration from a Rails monolith to a hybrid Rails+Go services architecture and built a caching layer for high-volume social-post data (load times down 20-25%).
+**Why it matters:** "Describe a large migration," "a performance problem you solved," "a big technical decision."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result: 20-25% faster average load times; hybrid architecture delivered.
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Establishing frontend testing from zero (quality / initiative)
+**Source:** Resume - Agent.ai
+**What happened:** Introduced frontend unit and feature testing where there was none, raising coverage from 0% to 50% and reducing release risk.
+**Why it matters:** "A time you improved quality/process," "showed initiative without being asked," "raised the bar on a team."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result: Test coverage 0% to 50%; lower release risk.
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+### Secure MCP client with OAuth DCR (AI agent integration)
+**Source:** Resume - Agent.ai
+**What happened:** Designed and implemented a secure MCP client using OAuth Dynamic Client Registration, letting agents authenticate against and consume external MCP servers.
+**Why it matters:** "A complex integration / security-sensitive feature," "recent AI/agent work," "designing an auth flow."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Mentoring / technical leadership (people & influence)
+**Source:** Resume - HomeCare Connect / OneScreen.ai
+**What happened:** Led and mentored junior developers, ran code reviews across a team of 8, and established API contract guidelines between backend and frontend teams.
+**Why it matters:** "A time you mentored someone," "influenced without authority," "improved how a team works."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
 ## Common Tough Questions
 
