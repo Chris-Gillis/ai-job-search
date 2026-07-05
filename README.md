@@ -8,7 +8,7 @@ An AI-powered job application framework built on [Claude Code](https://claude.co
 
 ## What this is
 
-A structured workflow that turns Claude Code into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. The job portal search skills are built for the Danish market (Jobindex, Jobnet, Akademikernes Jobbank, etc.), but the pattern is designed to be swapped for your local job boards.
+A structured workflow that turns Claude Code into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. The job portal search skills are built for the Danish market (Jobindex, Jobnet, etc.), but the pattern is designed to be swapped for your local job boards.
 
 ```
 /setup          /scrape              /apply <url>
@@ -47,14 +47,14 @@ cd ai-job-search
 ### 2. Install job search tools
 
 ```bash
-cd .agents/skills/jobbank-search/cli && bun install && cd ../../../..
-cd .agents/skills/jobdanmark-search/cli && bun install && cd ../../../..
+cd .agents/skills/ashby-search/cli && bun install && cd ../../../..
+cd .agents/skills/greenhouse-search/cli && bun install && cd ../../../..
 cd .agents/skills/jobindex-search/cli && bun install && cd ../../../..
 cd .agents/skills/jobnet-search/cli && bun install && cd ../../../..
 cd .agents/skills/linkedin-search/cli && bun install && cd ../../../..
 ```
 
-For `linkedin-search` the install is optional: it has zero runtime dependencies and runs with plain `bun`; `bun install` only pulls TypeScript dev types.
+For `ashby-search`, `greenhouse-search`, and `linkedin-search` the install is optional: they have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
 
 ### 3. Set up your profile
 
@@ -122,8 +122,8 @@ ai-job-search/
 │   │   └── upskill/                   # /upskill skill gap analysis and learning plan
 │   └── settings.json                  # Claude Code permissions (shared, scoped)
 ├── .agents/skills/                    # Job portal CLI tools
-│   ├── jobbank-search/                # Akademikernes Jobbank (Denmark)
-│   ├── jobdanmark-search/             # Jobdanmark.dk (Denmark)
+│   ├── ashby-search/                  # Ashby ATS job boards (country-agnostic)
+│   ├── greenhouse-search/             # Greenhouse ATS job boards (country-agnostic)
 │   ├── jobindex-search/               # Jobindex.dk (Denmark)
 │   ├── jobnet-search/                 # Jobnet.dk (Denmark, government portal)
 │   └── linkedin-search/               # LinkedIn public job listings (country-agnostic)
@@ -202,9 +202,11 @@ The CV uses [moderncv](https://ctan.org/pkg/moderncv) (banking style). The cover
 
 ### Job search tools
 
-The four Danish CLI tools in `.agents/skills/` (Jobbank, Jobdanmark, Jobindex, Jobnet) demonstrate the pattern for building a job-portal integration for a specific market. If you're in a different country, you can build equivalent tools for your local job portals using the same structure.
+The Danish CLI tools in `.agents/skills/` (Jobindex, Jobnet) demonstrate the pattern for building a job-portal integration for a specific market. If you're in a different country, you can build equivalent tools for your local job portals using the same structure.
 
 For a **country-agnostic** starting point, the repo also includes **`linkedin-search`** — a job-search skill built on LinkedIn's public, unauthenticated `jobs-guest` endpoints. It is field-agnostic, has **zero runtime dependencies** (runs with just `bun`), and takes the search location as an explicit flag, so it works for any market out of the box (`-l "Berlin, Germany"`, `-l "Mumbai, Maharashtra, India"`, `-l "Remote"`, …). It is intended for **personal use only** — automated access is against LinkedIn's Terms of Service, so keep volume low. See `.agents/skills/linkedin-search/SKILL.md`.
+
+Two more country-agnostic tools — **`ashby-search`** and **`greenhouse-search`** — cover the Ashby and Greenhouse ATS platforms that many companies use for their careers pages. Both hit official public JSON APIs (no authentication) and have **zero runtime dependencies**. Because these ATSs are multi-tenant, they are **board-scoped**: there is no global cross-company search, so you pass a company's board token/slug with `--board` (e.g. `-b stripe` for Greenhouse, `-b Ashby` for Ashby) and the tool searches that company's openings. See their `SKILL.md` files under `.agents/skills/`.
 
 ### Salary benchmarking
 
