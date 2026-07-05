@@ -8,7 +8,7 @@ An AI-powered job application framework built on [Claude Code](https://claude.co
 
 ## What this is
 
-A structured workflow that turns Claude Code into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. The job portal search skills are built for the Danish market (Jobindex, Jobnet, etc.), but the pattern is designed to be swapped for your local job boards.
+A structured workflow that turns Claude Code into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. The job portal search skills include country-agnostic tools (LinkedIn, the Ashby, Greenhouse, Lever, and SmartRecruiters ATS platforms, and the Remotive remote-job aggregator) alongside Danish-market examples (Jobindex, Jobnet); the pattern is designed to be swapped for your local job boards.
 
 ```
 /setup          /scrape              /apply <url>
@@ -51,10 +51,13 @@ cd .agents/skills/ashby-search/cli && bun install && cd ../../../..
 cd .agents/skills/greenhouse-search/cli && bun install && cd ../../../..
 cd .agents/skills/jobindex-search/cli && bun install && cd ../../../..
 cd .agents/skills/jobnet-search/cli && bun install && cd ../../../..
+cd .agents/skills/lever-search/cli && bun install && cd ../../../..
 cd .agents/skills/linkedin-search/cli && bun install && cd ../../../..
+cd .agents/skills/remotive-search/cli && bun install && cd ../../../..
+cd .agents/skills/smartrecruiters-search/cli && bun install && cd ../../../..
 ```
 
-For `ashby-search`, `greenhouse-search`, and `linkedin-search` the install is optional: they have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
+For `ashby-search`, `greenhouse-search`, `lever-search`, `linkedin-search`, `remotive-search`, and `smartrecruiters-search` the install is optional: they have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
 
 ### 3. Set up your profile
 
@@ -126,7 +129,10 @@ ai-job-search/
 │   ├── greenhouse-search/             # Greenhouse ATS job boards (country-agnostic)
 │   ├── jobindex-search/               # Jobindex.dk (Denmark)
 │   ├── jobnet-search/                 # Jobnet.dk (Denmark, government portal)
-│   └── linkedin-search/               # LinkedIn public job listings (country-agnostic)
+│   ├── lever-search/                  # Lever ATS job boards (country-agnostic)
+│   ├── linkedin-search/               # LinkedIn public job listings (country-agnostic)
+│   ├── remotive-search/               # Remotive remote-job aggregator (global, no board)
+│   └── smartrecruiters-search/        # SmartRecruiters ATS job boards (country-agnostic)
 ├── cv/
 │   └── main_example.tex               # moderncv LaTeX template
 ├── cover_letters/
@@ -206,7 +212,9 @@ The Danish CLI tools in `.agents/skills/` (Jobindex, Jobnet) demonstrate the pat
 
 For a **country-agnostic** starting point, the repo also includes **`linkedin-search`** — a job-search skill built on LinkedIn's public, unauthenticated `jobs-guest` endpoints. It is field-agnostic, has **zero runtime dependencies** (runs with just `bun`), and takes the search location as an explicit flag, so it works for any market out of the box (`-l "Berlin, Germany"`, `-l "Mumbai, Maharashtra, India"`, `-l "Remote"`, …). It is intended for **personal use only** — automated access is against LinkedIn's Terms of Service, so keep volume low. See `.agents/skills/linkedin-search/SKILL.md`.
 
-Two more country-agnostic tools — **`ashby-search`** and **`greenhouse-search`** — cover the Ashby and Greenhouse ATS platforms that many companies use for their careers pages. Both hit official public JSON APIs (no authentication) and have **zero runtime dependencies**. Because these ATSs are multi-tenant, they are **board-scoped**: there is no global cross-company search, so you pass a company's board token/slug with `--board` (e.g. `-b stripe` for Greenhouse, `-b Ashby` for Ashby) and the tool searches that company's openings. See their `SKILL.md` files under `.agents/skills/`.
+Four more country-agnostic tools — **`ashby-search`**, **`greenhouse-search`**, **`lever-search`**, and **`smartrecruiters-search`** — cover the Ashby, Greenhouse, Lever, and SmartRecruiters ATS platforms that many companies use for their careers pages. All hit official public JSON APIs (no authentication) and have **zero runtime dependencies**. Because these ATSs are multi-tenant, they are **board-scoped**: there is no global cross-company search, so you pass a company's board token/slug with `--board` (e.g. `-b stripe` for Greenhouse, `-b Ashby` for Ashby, `-b spotify` for Lever, `-b Visa` for SmartRecruiters) and the tool searches that company's openings. SmartRecruiters additionally supports server-side keyword search. See their `SKILL.md` files under `.agents/skills/`.
+
+For discovery rather than a specific company, **`remotive-search`** is a global remote-job **aggregator** built on [Remotive](https://remotive.com)'s public API: one keyword query searches every company at once and every result is fully remote (no `--board`) — handy for remote-first searches. Per Remotive's terms it's a low-frequency source (call it a couple of times a day, and credit Remotive). See `.agents/skills/remotive-search/SKILL.md`.
 
 ### Salary benchmarking
 

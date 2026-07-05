@@ -52,12 +52,12 @@ Or manually: fork on GitHub, then clone your fork.
 ## 3. Install job search CLI dependencies
 
 ```bash
-for tool in ashby-search greenhouse-search jobindex-search jobnet-search linkedin-search; do
+for tool in ashby-search greenhouse-search jobindex-search jobnet-search lever-search linkedin-search remotive-search smartrecruiters-search; do
   cd .agents/skills/$tool/cli && bun install && cd ../../../..
 done
 ```
 
-For `ashby-search`, `greenhouse-search`, and `linkedin-search` the install is optional: they have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
+For `ashby-search`, `greenhouse-search`, `lever-search`, `linkedin-search`, `remotive-search`, and `smartrecruiters-search` the install is optional: they have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
 
 ## 4. Run the setup interview
 
